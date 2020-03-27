@@ -14,8 +14,9 @@ plot(A.Time, A.Data(:,2:end), 'LineWidth', 1)
 ylabel('Angle (rad)')
 legend('Base','First','Second','Third','Four')
 grid on
-title('base')
+title('position')
 xlabel('Time (s)')
+xlim([0 0.3])
 
 figure;
 plot(W.Time, W.Data(:,2:end), 'LineWidth', 1)
@@ -24,8 +25,8 @@ legend('Base','First','Second','Third','Four')
 grid on
 title('velocity')
 xlabel('Time (s)')
-% xlim([0 0.1])
-% ylim([0 0.3])
+xlim([0 0.3])
+ylim([-200 200])
 
 figure;
 plot(T.Time, T.Data(:,2:end), 'LineWidth', 1)
@@ -34,4 +35,4 @@ legend('Base','First','Second','Third','Four')
 grid on
 title('torque')
 xlabel('Time (s)')
-% xlim([0 0.1])
+xlim([0 0.3])
